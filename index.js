@@ -32,7 +32,7 @@ module.exports = {
         title: response.Title,
         // @TODO: Truncate the Plot when it is long
         subtitle: `${response.imdbRating} - ${response.Plot}`,
-        arg: `http://imdb.com/title/${response.omdbID}`,
+        arg: `http://imdb.com/title/${response.imdbID}`,
       }
 
       resolve({ items: [resultItem] })
