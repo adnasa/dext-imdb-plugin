@@ -1,0 +1,31 @@
+{
+  "name": "dext-omdb-plugin",
+  "version": "0.0.1",
+  "description": "An omdb-api plugin for dext, a smart launcher powered by Javascript",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.5.0",
+    "ghooks": "^1.3.2"
+  },
+  "scripts": {
+    "lint": "eslint index.js"
+  },
+  "keywords": [
+    "dext",
+    "dext-plugin",
+    "plugin",
+    "omdb",
+    "search"
+  ],
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "Adnan Asani",
+  "license": "MIT"
+}
