@@ -15,7 +15,7 @@ module.exports = {
     title: 'omdb',
     subtitle: 'Find a movie you\'re curious about',
   },
-  execute: q => new Promise(resolve => {
+  query: q => new Promise(resolve => {
     const searchObj = Object.assign({}, OPTS_DEFAULT, { t: q })
     const searchParams = qs.stringify(searchObj)
     const url = `${BASE_URL}?${searchParams}`
@@ -34,7 +34,6 @@ module.exports = {
         subtitle: `${response.imdbRating} - ${response.Plot}`,
         arg: `http://imdb.com/title/${response.imdbID}`,
       }
-
       resolve({ items: [resultItem] })
     })
   }),
